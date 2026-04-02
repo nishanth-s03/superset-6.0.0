@@ -1,8 +1,7 @@
 FROM apache/superset:6.0.0
 
 USER root
-
-RUN pip install psycopg2-binary
+RUN pip install psycopg2-binary gevent
 
 USER superset
 
