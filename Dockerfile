@@ -2,7 +2,7 @@ FROM apache/superset:6.0.0
 
 USER root
 
-RUN pip3 install --no-cache-dir psycopg
+RUN /bin/bash -c "source /app/.venv/bin/activate && pip install --no-cache-dir psycopg2-binary"
 
 COPY superset_config.py /app/pythonpath/superset_config.py
 
