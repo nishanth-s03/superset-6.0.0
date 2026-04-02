@@ -1,7 +1,8 @@
 FROM apache/superset:6.0.0
 
 USER root
-RUN pip install psycopg2-binary
+
+RUN /app/.venv/bin/pip install psycopg2-binary
 
 COPY superset_config.py /app/pythonpath/superset_config.py
 
