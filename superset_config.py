@@ -18,5 +18,9 @@ SESSION_COOKIE_SAMESITE = "Lax"
 # Proxy support for Render / reverse proxy
 ENABLE_PROXY_FIX = True
 
+FEATURE_FLAGS = {
+    "ENABLE_TEMPLATE_PROCESSING": True,
+}
+
 # Superset webserver settings
 SUPERSET_WEBSERVER_PORT = int(os.getenv("PORT", 8088))
